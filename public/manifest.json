@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "path": "/words_1.csv",
+    "description": "모양이 비슷한 한자, 같은 한자를 포함한 음독 명사",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  },
+  {
+    "id": 1,
+    "path": "/words_2.csv",
+    "description": "장음에 주의해야 할 음독 명사, 발음이 2개 이상인 한자를 포함한 음독 명사",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  },
+  {
+    "id": 2,
+    "path": "/words_3.csv",
+    "description": "반탁음/촉음에 주의해야 할 음독 명사, 한자읽기에 자주 출제되는 음독 な형용사, 한자읽기에 자주 출제되는 훈독 명사, 한자읽기에 자주 출제되는 음독과 훈독이 혼합된 명사",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  },
+  {
+    "id": 3,
+    "path": "/words_4.csv",
+    "description": "한자읽기에 자주 출제되는 동사, 한자읽기에 자주 출제되는 い・な형용사",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  },
+  {
+    "id": 4,
+    "path": "/words_5.csv",
+    "description": "문맥규정에 자주 출제되는 명사와 동사",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  },
+  {
+    "id": 5,
+    "path": "/words_6.csv",
+    "description": "문맥규정에 자주 출제되는 い・な형용사, 문맥규정에 자주 출제되는 부사, 문맥규정에 자주 출제되는 파생어",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  },
+  {
+    "id": 6,
+    "path": "/words_7.csv",
+    "description": "용법에 자주 출제되는 명사와 동사",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  },
+  {
+    "id": 7,
+    "path": "/words_8.csv",
+    "description": "용법에 자주 출제되는 い・な형용사, 용법에 자주 출제되는 부사",
+    "source": "해커스 JLPT N1 한 권으로 합격"
+  }
+]
