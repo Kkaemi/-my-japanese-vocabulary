@@ -1,33 +1,22 @@
 import type { Tango } from "@/types/tango.type";
 import { clsx, type ClassValue } from "clsx";
-// import manifest from "public/manifest.json";
+import Papa from "papaparse";
 import { twMerge } from "tailwind-merge";
-
-// csv 정적 파일들의 상세 정보가 담긴 json 파일을 타입으로 만든다.
-// type Manifest = typeof manifest;
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 // csv 파일 로드
-export async function loadTango(path: string) {
+export async function loadTango(path: string): Promise<Tango[]> {
   const text = await fetch(path).then((res) => res.text());
-  const csv = text.split(/\r\n|\n|\r/);
-  csv.shift(); // Remove header row
-  const rows = csv.filter((row) => row);
-  const tangoList: Tango[] = [];
+  const { data: dataList } = Papa.parse<
+    Omit<Tango, keyof Pick<Tango, "isLearned">>
+  >(text, {
+    header: true,
+  });
 
-  for (const row of rows) {
-    const [kanji, furigana, korean] = row.split(",") as [
-      string,
-      string,
-      string
-    ];
-    tangoList.push({ kanji, hiragana: furigana, korean, isLearned: false });
-  }
-
-  return tangoList;
+  return dataList.map((data) => ({ ...data, isLearned: false }));
 }
 
 // shuffle
